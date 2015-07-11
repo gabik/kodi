@@ -1,0 +1,20 @@
+[B]1.0.9[/B]
+- Added search option.
+- Added sorting method option. (website-order / alphabetic-order)
+- Addon name changed.
+[B]1.0.8[/B]
+- Added more categories.
+[B]1.0.7[/B]
+- Adjust to APIs' changes (again..).
+[B]1.0.6[/B]
+- Fix playing problems for few users.
+[B]1.0.5[/B]
+- Adjust to APIs' changes (again).
+[B]1.0.4[/B]
+- Adjust to APIs' changes.
+[B]1.0.3[/B]
+- Bugfix, the addon will start faster now.
+[B]1.0.1[/B]
+- Fix for XBMC versions.
+[B]1.0.0[/B]
+- Initial release.

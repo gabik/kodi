@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+<addon id="plugin.video.hotVOD.video" name="Hot VOD" version="1.0.0" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+    <extension point="xbmc.python.pluginsource" library="Hot.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Watch Hot video contents.</summary>
+        <description>Watch Hot Video contents from Hot.ynet.co.il.</description>
+        <disclaimer>This addon parse Hot's site, you should check Hot's TOS before you using. It's as is</disclaimer>
+    </extension>
+</addon>
+
+<addon id="plugin.video.israelive" name="[COLOR white]Israe[/COLOR][COLOR blue]L[/COLOR][COLOR white]IVE[/COLOR]" version="1.0.0" provider-name="Gabi">
+  <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Israel Live</summary>
+    <description>Israel Live channels</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.israelsports" name="Israel Sports" version="1.0.0" provider-name="Gabi">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="5.1.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Plays episodes from sport5 and one.co.il site</summary>
+    <description>This addon parse sport5 site and one.co.il  you should check sport5 TOS before you using. It's as is</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.KIDSIL" name="KIDSIL" version="1.0.0" provider-name="Gabi">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.video.youtube" version="2.1.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+    <summary>Browse children sections in other addons</summary>
+    <description>links to other  childern addons .</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.MakoTV" name="MakoTV (web)" version="1.0.0" provider-name="Gabi">
+	<requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+	<extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Watch MakoTV Videos</summary>
+		<description>Watch Mako Video content from MakoTV website.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.makoTV.video" name="Mako TV" version="1.0.0" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+    <extension point="xbmc.python.pluginsource" library="Mako.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Watch Mako video contents.</summary>
+        <description>Watch Mako Video contents from Mako Application for cellular.</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.reshet.video" name="Reshet" version="1.0.0" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+    <extension point="xbmc.python.pluginsource" library="reshet.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Watch Reshet video contents.</summary>
+        <description>Watch contents from Reshet's android application.</description>
+        <disclaimer>This addon parse Reshets's android application, you should check Reshet's TOS before you using. It's as is</disclaimer>
+    </extension>
+</addon>
+
+<addon id="plugin.video.genesis" name="Genesis" version="4.8.3" provider-name="Gabi">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.pyxbmct" version="1.1.4" />
+		<import addon="script.module.requests" version="1.0.0" />
+		<import addon="script.module.metahandler" optional="true" />
+		<import addon="plugin.video.youtube" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Gabi Genesis</summary>
+		<platform>all</platform>
+	</extension>
+</addon>
+<addon id="repository.gabi" name="Gabi repository" version="1.0.0" provider-name="Gabi">
+	<extension point="xbmc.addon.repository" name="Gabi repository">
+		<dir>
+			<info compressed="false">http://kodi.kazav.net/repo/addons.xml</info>
+			<checksum>http://kodi.kazav.net/repo/addons.xml.md5</checksum>
+			<datadir zip="true">http://kodi.kazav.net/repo/</datadir>
+		</dir>
+		<info compressed="false">http://kodi.kazav.net/repo/addons.xml</info>
+		<checksum>http://kodi.kazav.net/repo/addons.xml.md5</checksum>
+		<datadir zip="true">http://kodi.kazav.net/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Add-ons from Gabi</summary>
+		<description>Download and install add-ons from Gabi repository.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="service.subtitles.opensubtitles" name="OpenSubtitles.org" version="1.0.0" provider-name="Gabi">
+  <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+  <extension point="xbmc.subtitle.module" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary>OpenSubtitles</summary>
+    <description>Search and download subtitles from opensubtitles.org</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+</addons>
