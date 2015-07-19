@@ -1,0 +1,10 @@
+<addon id="service.inadyn" name="InaDyn" version="2.0.12" provider-name="Gabi">
+  <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"></extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Dynamic DNS</summary>
+    <description>All DDNS Clients</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
