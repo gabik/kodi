@@ -13,7 +13,7 @@ for i in $(ls $src_dir) ; do
 		unzip master.zip
 		mv ${i}-master ${i}
 		cd ${i}
-		newver=$(head -1 changelog.txt)
+		newver=$(cat addon.xml | grep version | grep -v xml | head -1 | cut -d\" -f2)
 		cd ..
 		file=${i}-${newver}.zip
 		zip -r $file ${i}
@@ -29,12 +29,10 @@ for i in $(ls $src_dir) ; do
 	rm $file
 done
 
-exit 0
-
 OLD_IFS=$IFS
 IFS=
 
-ADDONS_HEAD="
+ADDONS_HEAD='
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 
@@ -55,22 +53,24 @@ ADDONS_HEAD="
                 <platform>all</platform>
         </extension>
 </addon>
-"
+'
 
 cd $repo_dir
 rm addons.xml*
 
 echo $ADDONS_HEAD > addons.xml
 
+IFS=$OLD_IFS
+
 for i in $(ls -l | grep ^d | awk '{print $NF}' | grep -v ^repo) ; do
 	cd ${i}
-	find * -type d -exec rm -rf {} \;
+	rm -rf ${i}
 	new=$(ls *zip | tail -1)
 	unzip ${new}
-	cd $(find * -type d | tail -1)
-	cat addon.xml >> ${repo_dir}/addons.xml
+	cd ${i}
+	cat addon.xml | grep -ve '^<?xml'  >> ${repo_dir}/addons.xml
 	cd ..
-	find * -type d -exec rm -rf {} \;
+	rm -rf ${i}
 	cd ..
 done
 
