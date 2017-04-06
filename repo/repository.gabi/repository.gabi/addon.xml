@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.gabi" name="[COLOR blue]Gabi repository[/COLOR]" version="1.0.1" provider-name="Gabi">
+<addon id="repository.gabi" name="[COLOR blue]Gabi repository[/COLOR]" version="1.0.2" provider-name="Gabi">
 	<extension point="xbmc.addon.repository" name="Gabi repository">
 	  <info compressed="false">http://kodi.kazav.net/repo/addons.xml</info>
 	  <checksum>http://kodi.kazav.net/repo/addons.xml.md5</checksum>

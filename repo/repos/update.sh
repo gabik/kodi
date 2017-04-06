@@ -68,7 +68,7 @@ for i in $(ls -l | grep ^d | awk '{print $NF}' | grep -v ^repo) ; do
 	new=$(ls *zip | tail -1)
 	unzip ${new}
 	cd ${i}
-	cat addon.xml | grep -ve '^<?xml'  >> ${repo_dir}/addons.xml
+	cat addon.xml | grep -v '<?xml' | grep -v '<import addon="repository.' >> ${repo_dir}/addons.xml
 	cd ..
 	rm -rf ${i}
 	cd ..

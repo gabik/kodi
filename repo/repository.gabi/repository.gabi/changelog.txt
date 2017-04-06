@@ -1,3 +1,6 @@
+[B]Version 1.0.2[/B]
+- Auto update
+
 [B]Version 1.0.1[/B]
 - Add PheoniX
 
