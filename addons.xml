@@ -1,101 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 
-<addon id="plugin.video.hotVOD.video" name="Hot VOD" version="1.0.0" provider-name="Gabi">
-    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
-    <extension point="xbmc.python.pluginsource" library="Hot.py"> <provides>video</provides> </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Watch Hot video contents.</summary>
-        <description>Watch Hot Video contents from Hot.ynet.co.il.</description>
-        <disclaimer>This addon parse Hot's site, you should check Hot's TOS before you using. It's as is</disclaimer>
-    </extension>
-</addon>
-
-<addon id="plugin.video.israelive" name="[COLOR white]Israe[/COLOR][COLOR blue]L[/COLOR][COLOR white]IVE[/COLOR]" version="1.0.0" provider-name="Gabi">
-  <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
-  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Israel Live</summary>
-    <description>Israel Live channels</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.israelsports" name="Israel Sports" version="1.0.0" provider-name="Gabi">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="5.1.3"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Plays episodes from sport5 and one.co.il site</summary>
-    <description>This addon parse sport5 site and one.co.il  you should check sport5 TOS before you using. It's as is</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.KIDSIL" name="KIDSIL" version="1.0.0" provider-name="Gabi">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="plugin.video.youtube" version="2.1.3"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
-    <extension point="xbmc.addon.metadata">
-    <summary>Browse children sections in other addons</summary>
-    <description>links to other  childern addons .</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.MakoTV" name="MakoTV (web)" version="1.0.0" provider-name="Gabi">
-	<requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
-	<extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Watch MakoTV Videos</summary>
-		<description>Watch Mako Video content from MakoTV website.</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="plugin.video.makoTV.video" name="Mako TV" version="1.0.0" provider-name="Gabi">
-    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
-    <extension point="xbmc.python.pluginsource" library="Mako.py"> <provides>video</provides> </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Watch Mako video contents.</summary>
-        <description>Watch Mako Video contents from Mako Application for cellular.</description>
-    </extension>
-</addon>
-
-<addon id="plugin.video.reshet.video" name="Reshet" version="1.0.0" provider-name="Gabi">
-    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
-    <extension point="xbmc.python.pluginsource" library="reshet.py"> <provides>video</provides> </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Watch Reshet video contents.</summary>
-        <description>Watch contents from Reshet's android application.</description>
-        <disclaimer>This addon parse Reshets's android application, you should check Reshet's TOS before you using. It's as is</disclaimer>
-    </extension>
-</addon>
-
-<addon id="plugin.video.genesis" name="Genesis" version="4.8.3" provider-name="Gabi">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="script.module.pyxbmct" version="1.1.4" />
-		<import addon="script.module.requests" version="1.0.0" />
-		<import addon="script.module.metahandler" optional="true" />
-		<import addon="plugin.video.youtube" optional="true" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Gabi Genesis</summary>
-		<platform>all</platform>
-	</extension>
-</addon>
-<addon id="repository.gabi" name="Gabi repository" version="1.0.0" provider-name="Gabi">
+<addon id="repository.gabi" name="Gabi repository" version="1.0.1" provider-name="Gabi">
 	<extension point="xbmc.addon.repository" name="Gabi repository">
 		<dir>
 			<info compressed="false">http://kodi.kazav.net/repo/addons.xml</info>
@@ -113,7 +19,81 @@
 	</extension>
 </addon>
 
-<addon id="service.subtitles.opensubtitles" name="OpenSubtitles.org" version="1.0.0" provider-name="Gabi">
+<addon id="plugin.video.hotVOD.video" name="Hot VOD" version="1.1.6" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+    <extension point="xbmc.python.pluginsource" library="Hot.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Watch Hot video contents.</summary>
+        <description>Watch Hot Video contents from Hot.ynet.co.il.</description>
+        <disclaimer>This addon parse Hot's site, you should check Hot's TOS before you using. It's as is</disclaimer>
+    </extension>
+</addon>
+
+<addon id="plugin.video.israelive" name="[COLOR white]Israe[/COLOR][COLOR blue]L[/COLOR][COLOR white]IVE[/COLOR]" version="4.9.3" provider-name="Gabi">
+  <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Israel Live</summary>
+    <description>Israel Live channels</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.israelsports" name="Israel Sports" version="2.2.8" provider-name="Gabi">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="5.1.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Plays episodes from sport5 and one.co.il site</summary>
+    <description>This addon parse sport5 site and one.co.il  you should check sport5 TOS before you using. It's as is</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.KIDSIL" name="KIDSIL" version="1.4.1" provider-name="Gabi">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.video.youtube" version="2.1.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+    <summary>Browse children sections in other addons</summary>
+    <description>links to other  childern addons .</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.makoTV.video" name="Mako TV" version="1.35.1" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+    <extension point="xbmc.python.pluginsource" library="Mako.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Watch Mako video contents.</summary>
+        <description>Watch Mako Video contents from Mako Application for cellular.</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.genesis" name="Genesis" version="2016.02.06.3" provider-name="Gabi">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.pyxbmct" version="1.1.4" />
+		<import addon="script.module.requests" version="1.0.0" />
+		<import addon="script.module.metahandler" optional="true" />
+		<import addon="plugin.video.youtube" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Gabi Genesis</summary>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="service.subtitles.opensubtitles" name="OpenSubtitles.org" version="5.2.14" provider-name="Gabi">
   <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
   <extension point="xbmc.subtitle.module" library="service.py" />
   <extension point="xbmc.addon.metadata">
@@ -133,14 +113,175 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.bbts" name="BBTS" version="0.1.2" provider-name="Gabi">
-	<requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+<addon id="script.module.urlresolver" name="UrlResolver" version="3.0.24" provider-name="Gabi">
+  <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"></extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Needed for Pheonix</summary>
+    <description>Needed for PheonixClients</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.liveresolver" name="LiveResolver" version="0.1.48" provider-name="Gabi">
+  <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"></extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Needed for Pheonix</summary>
+    <description>Needed for PheonixClients</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.video.F4mProxy" name="F4mProxy" version="2.6.6" provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Proxy for f4m</summary>
+    <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.phstreams" name="PhoeniX" version="3.1.15" provider-name="Gabi">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="5.2.1" optional="true"/>
+    <import addon="script.module.pyxbmct" version="1.1.4"/>
+    <import addon="script.module.urlresolver" version="3.0.0"/>
+    <import addon="script.module.liveresolver" version="0.1.24"/>
+    <import addon="script.video.F4mProxy" version="2.2.3"/>
+  </requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py"> <provides>video</provides> </extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>BBTS add-on</summary>
-		<description>All TV Channels</description>
+		<summary>PhoeniX</summary>
+		<description>Streams</description>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="plugin.video.1channel" name="1 Channel" version="2.5.72" provider-name="Gabi">
+    <requires>
+      <import addon="xbmc.python" version="2.1.0"/>
+      <import addon="script.module.urlresolver" version="3.0"/>
+      <import addon="script.module.addon.common" version="2.0.0"/>
+      <import addon="script.module.metahandler" version="2.6.0"/>
+      <import addon="script.module.myconnpy" version="1.1.6"/>
+      <import addon="script.module.axel.downloader" version="0.2.0" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Watch series</summary>
+        <description>Watch series</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.exodus" version="3.1.7" name="Exodus" provider-name="Gabi">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.exodus.artwork" version="1.0.4" />
+        <import addon="script.module.urlresolver" version="3.0.0" />
+        <import addon="script.module.metahandler" version="1.0.0" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="exodus.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Exodus</summary>
+        <description lang="en">Please visit www.tvaddons.ag for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.exodus.artwork" version="1.0.4" name="Exodus Artwork" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.19.0"/> </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Themes for the Exodus Addon</summary>
+        <description>Themes for Exodus are maintained separately to make distribution of the the addon itself easier/faster.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.kodipopcorntime" name="KODI Popcorn Time" version="1.5.5.rc3" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.14.0"/> </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>English</language>
+        <summary>KODI Popcorn Time: Immediately stream movies in KODI.</summary>
+        <description>With KODI Popcorn Time you can search for movies that you can see immediately in KODI.</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.sdarot.tv" name="Sdarot.tv Video" version="2.4.3" provider-name="cubicle">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="sdarottv.py">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <minversion>31632</minversion>
+        <summary lang="en">Watch Sdarot.tv video contents.</summary>
+        <summary lang="he">סדרות מתוך האתר sdarot.tv</summary>
+        <description lang="en">Watch the many TV series available on sdarot.tv</description>
+        <description lang="he">צפיה בסדרות (הרבות) שיש באתר sdarot.tv</description>
+        <disclaimer>This addon parsees their website, you should check their TOS before you using. It's as is</disclaimer>
+        <supportedcontent>
+          <content>tvshows</content>
+        </supportedcontent>
+    </extension>
+
+</addon>
+
+<addon id="plugin.video.youtube" name="YouTube" version="5.3.4" provider-name="Gabi">
+    <requires> <import addon="xbmc.python" version="2.1.0"/> </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py"> <provides>video</provides> </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Plugin for YouTube</summary>
+        <description lang="en">YouTube is one of the biggest video-sharing websites of the world.</description>
+        <disclaimer lang="en"></disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="service.subtitles.torec" name="Torec" version="1.3.0" provider-name="slmosl">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+    <import addon="script.common.plugin.cache" version="0.9.1"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+  </requires>
+  <extension point="xbmc.subtitle.module" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Kodi/XBMC Torec Subtitles allows for downloading hebrew subtitles from the Israeli site Torec.net</summary>
+    <description lang="en">Search and download various hebrew subtitles from the Israeli subtitles site Torec.net.</description>
+    <source>https://github.com/slmosl/service.subtitles.Torec</source>
+    <email></email>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  </extension>
+</addon>
+
+<addon id="script.keymap" name="Keymap Editor" version="1.0.10" provider-name="takoi">
+    <requires> <import addon="xbmc.python" version="2.19.0"/> </requires>
+    <extension point="xbmc.python.script" library="main.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">An editor for keymap files</summary>
+        <description lang="en">Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by xbmc. Note: existing user d
+efined key mappings will be removed.</description>
+        <platform>all</platform>
+        <language/>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum>http://forum.xbmc.org/showthread.php?tid=168767</forum>
+        <source>https://github.com/tamland/xbmc-keymap-editor</source>
+    </extension>
 </addon>
 
 </addons>
