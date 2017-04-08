@@ -1,6 +1,7 @@
 #!/bin/bash -x
 
 repo_dir="/home/gabi/kodi/repo"
+cd $repo_dir/repos
 src_dir="${repo_dir}/repos/input"
 full_archive="${repo_dir}/repos/full_archive"
 
