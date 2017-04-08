@@ -4,16 +4,21 @@ repo_dir="/home/gabi/kodi/repo"
 src_dir="${repo_dir}/repos/input"
 full_archive="${repo_dir}/repos/full_archive"
 
+upgrade_list=$(ls $src_dir)
+if [[ $# -eq 1 ]] ; then upgrade_list=${1} ; fi
+
+
 cd output
 
-for i in $(ls $src_dir) ; do
+for i in ${upgrade_list} ; do
 	rdir="$(cat ${src_dir}/${i} | head -1)"
 	if grep $i $full_archive &> /dev/null ; then
-		curl -LOsk ${rdir}
+		curl -LOsk ${rdir}/archive/master.zip
 		unzip master.zip
 		mv ${i}-master ${i}
 		cd ${i}
-		newver=$(cat addon.xml | grep version | grep -v xml | head -1 | cut -d\" -f2)
+		#newver=$(cat addon.xml | grep version | grep -v xml | head -1 | cut -d\" -f2)
+		newver=$(cat addon.xml | perl -pe 's/<\?xml .*?>//' | perl -ne 'print $1, "\n" if /version=\"(.*?)\"/' | head -1)
 		cd ..
 		file=${i}-${newver}.zip
 		zip -r $file ${i}
@@ -32,8 +37,7 @@ done
 OLD_IFS=$IFS
 IFS=
 
-ADDONS_HEAD='
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ADDONS_HEAD='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 
 <addon id="repository.gabi" name="Gabi repository" version="1.0.1" provider-name="Gabi">
@@ -68,7 +72,7 @@ for i in $(ls -l | grep ^d | awk '{print $NF}' | grep -v ^repo) ; do
 	new=$(ls *zip | tail -1)
 	unzip ${new}
 	cd ${i}
-	cat addon.xml | grep -v '<?xml' | grep -v '<import addon="repository.' >> ${repo_dir}/addons.xml
+	cat addon.xml | perl -pe 's/<\?xml .*?>//' | perl -pe 's/<import addon="repository.*$//' >> ${repo_dir}/addons.xml
 	cd ..
 	rm -rf ${i}
 	cd ..
