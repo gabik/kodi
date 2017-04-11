@@ -60,7 +60,7 @@
     </extension>
 </addon>
 ﻿
-<addon id="plugin.video.exodus" version="3.1.7" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="3.1.8" name="Exodus" provider-name="Exodus">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		
@@ -91,9 +91,12 @@
 			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>- Updated existing providers (satanuke, somebody)
-- Tweaked German providers
-- Added Mega-Debrid</news>
+		<news>- Added and Updated French providers
+- Added and Updated German providers
+- Updated Polish providers (homik)
+- Add Blazingfast support
+- Remove old Debrid-Code
+- Note: You might have to reconfigure your Debrid Service in URLResolver Settings</news>
 	</extension>
 </addon>
 <addon id="plugin.video.f4mTester" version="2.7.1" name="f4mTester" provider-name="Shani">
@@ -251,7 +254,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.phstreams" name="Phoenix" version="3.2.7" provider-name="tvaddons.ag">
+<addon id="plugin.video.phstreams" name="Phoenix" version="3.2.9" provider-name="tvaddons.ag">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
@@ -276,7 +279,7 @@
 			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>Reset source file integration files</news>
+		<news>Source repair</news>
 	</extension>
 </addon>
 ﻿
@@ -394,6 +397,39 @@
         <forum>http://forum.xbmc.org/showthread.php?tid=168767</forum>
         <source>https://github.com/tamland/xbmc-keymap-editor</source>
     </extension>
+</addon>
+
+<addon id="script.module.beautifulsoup"
+       name="BeautifulSoup"
+       version="3.2.1"
+       provider-name="Leonard Richardson (leonardr@segfault.org)">
+  <requires>
+    <import addon="xbmc.python" 
+    		version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>HTML/XML parser for quick-turnaround applications like screen-scraping</summary>
+    <description>Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.</description>
+    <license>BSD</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.israeliveresolver" name="IsraeLiveResolver" version="0.3.3" provider-name="Avigdor (xbmc-israel repo)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+	
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+  <extension point="xbmc.service" library="lib/service.py" start="[login|startup]"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve dynamic URL's to be playable in XBMC/Kodi.</summary>
+    <description lang="en">Resolve dynamic URL's to be playable in XBMC/Kodi.</description>    
+  </extension>
 </addon>
 
 <addon id="script.module.liveresolver" 
