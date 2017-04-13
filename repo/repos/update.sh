@@ -61,6 +61,7 @@ ADDONS_HEAD='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 '
 
 cd $repo_dir
+mv addons.xml old_addons.xml
 rm addons.xml*
 
 echo $ADDONS_HEAD > addons.xml
@@ -86,3 +87,9 @@ echo '
 
 md5sum addons.xml | awk '{print $1}'> addons.xml.md5
 
+if ! xmllint --noout addons.xml ; then echo "addons.xml Chack failed!!!!" 
+else 
+	echo "addons.xml validated OK." 
+	diff old_addons.xml addons.xml
+	rm old_addons.xml
+fi
