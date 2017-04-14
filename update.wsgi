@@ -7,11 +7,12 @@ def get_html():
 	upgrade_path = "/home/gabi/kodi/repo/repos/update.sh"
 	process = subprocess.Popen(upgrade_path, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
 	stdout_list = process.communicate()[0].split('\n')
-	output = ""
+	output = "<pre>"
 	for i in stdout_list:
 		if i is None:
 			i = ""
-		output += i + '<BR>'
+		output += i + "\n"
+	output += '</pre>'
 	return output
 
 def application (env, r):
