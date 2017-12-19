@@ -26,7 +26,7 @@ for i in ${upgrade_list} ; do
 		rm -rf ${i}
 		rm master.zip
 	else
-		rfile=$(curl -s ${rdir} | grep zip | cut -d\" -f4 | tail -1)
+		rfile=$(curl -s ${rdir} | grep zip | cut -d\" -f4 | grep -e "zip$" | sort --version-sort | tail -1)
 		rlink=https://github.com$(echo ${rfile} | sed  "s/\/blob\//\/raw\//")
 		curl -LOsk ${rlink}
 		file=$(echo $rlink | xargs basename)
@@ -68,10 +68,10 @@ echo $ADDONS_HEAD > addons.xml
 
 IFS=$OLD_IFS
 
-for i in $(ls -l | grep ^d | awk '{print $NF}' | grep -v ^repo) ; do
+for i in $(ls -l | grep ^d | awk '{print $NF}' | grep -v ^repos$ | grep -v ^repository.gabi$) ; do
 	cd ${i}
 	rm -rf ${i}
-	new=$(ls *zip | tail -1)
+	new=$(ls *zip | sort --version-sort | tail -1)
 	unzip ${new}
 	cd ${i}
 	cat addon.xml | perl -pe 's/<\?xml .*?>//' | perl -pe 's/<import addon="repository.*$//' >> ${repo_dir}/addons.xml
